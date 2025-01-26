@@ -30,3 +30,18 @@ exports.createSupermarket = async (req, res) => {
     })
   }
 }
+
+exports.getAllSupermarket = async (req, res) => {
+    try {
+      const supermarket = await supermarketModel.findAll();
+      res.status(200).json({
+        message: 'Check supermarket below',
+        data: students
+      })
+    } catch (error) {
+      res.status(500).json({
+        message: 'Internal server error',
+        error: error.message
+      })
+    }
+  }
