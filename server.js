@@ -1,9 +1,11 @@
 const express = require('express')
 const port = 7856;
 const sequelize = require('./database/sequelize');
+const supermarketRouter = require('./Router/supermarketRouter');
 
 const app = express();
-app.use(express.json())
+app.use(express.json());
+app.use(supermarketRouter)
 
 const server =async ()=> {
     try {

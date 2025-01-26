@@ -1,6 +1,5 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
-
+const sequelize = require ('../database/sequelize')
 class supermarket extends Model { }
 
 supermarket.init(
