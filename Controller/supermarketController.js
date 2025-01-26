@@ -6,7 +6,7 @@ exports.createSupermarket = async (req, res) => {
     const { storeName, location, email, phoneNumber } = req.body;
     const existSupermarket = await supermarketModel.findAll({ where: { email: email } });
 
-    if (existStudent.length == 1) {
+    if (existSupermarket.length == 1) {
       return res.status(400).json('supermarket already exist')
     }
 
