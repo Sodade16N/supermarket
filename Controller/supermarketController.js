@@ -36,7 +36,7 @@ exports.getAllSupermarket = async (req, res) => {
       const supermarket = await supermarketModel.findAll();
       res.status(200).json({
         message: 'Check supermarket below',
-        data: students
+        data: supermarket
       })
     } catch (error) {
       res.status(500).json({
